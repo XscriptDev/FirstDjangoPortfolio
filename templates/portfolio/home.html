@@ -1,0 +1,30 @@
+<!-- importing base template so we do not need to rewrite the code -->
+{% extends 'base.html' %}
+<!-- loading the static files -->
+{% load static %}
+
+<!-- title block : -->
+{% block title %}Portfolio{% endblock %}
+{% block content %}
+    <h1 class=" helo mt-5">Hello there.</h1>
+    <i class="fas fa-code fonts"></i>
+    <div class="display-3 ttport"></div>
+    <p class="text-left desc">I am Oussama Benamirouche , A student in USTHB and a self taught web developer.This is my Portfolio website . here you can find most of my project and blogs , feel free to go to the blog section if you want to</p>
+    <p class="display-4 desc text-left text-danger">Projects:</p>
+    <div class="card-group">
+        <div class="row">  
+            {% for project in projects       %}
+                <div class="card col-xl-3 col-lg-4 col-md-6 col-sm-12 "  >
+                    <img class="card-img-top image-fluid ss" src="{{ project.image.url }}" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ project.title }}</h5>
+                         <p class="card-text"> {{ project.discription }} </p>
+                            {%  if project.url %}
+                                <p>url: <a href="{{    project.url         }}" class="btn btn-danger">click here</a> </p>
+                            {%  endif %}
+                    </div>
+                </div>
+            {% endfor    %}
+        </div>
+    </div>
+{% endblock %}

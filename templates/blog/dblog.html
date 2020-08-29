@@ -1,0 +1,15 @@
+<!-- importing base.html -->
+{% extends 'base.html' %}
+<!-- here is the title -->
+{% block title %}portfolio{% endblock %}
+<!-- here is the rest of the page -->
+{% block content %}
+<div class="desc">
+    <div class='jumbotron'>
+        <span class="display-2">{{ blog.title }}</span>
+    </div>
+    <h1>Description :</h1>
+    <p> {{ blog.discription }} </p>
+    <p>Date : {{ blog.date }} </p>
+</div>
+    {% endblock %}

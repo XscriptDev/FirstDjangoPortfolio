@@ -1,0 +1,23 @@
+body{
+    background-color:#D0D0D0;
+}
+.fonts{
+    font-size:240px;
+    color:black;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.codin{
+    font-family: 'Press Start 2P', cursive;
+}
+.helo{
+    font-family: 'Londrina Solid', cursive;
+}
+.desc{
+    font-family: 'Arvo', serif;
+    /* font-size:em; */
+    margin: 30px 30px;
+}
+.ss{
+    height: 200px;
+}
